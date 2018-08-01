@@ -19,7 +19,7 @@ public class SlackBotApplication extends SpringBootServletInitializer {
 	}
 
 	@Bean
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
+	public RestTemplate getRestTemplate() {
+	    return new RestTemplate();
 	}
 }
