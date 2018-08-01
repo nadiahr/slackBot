@@ -1,10 +1,11 @@
-package com.exemple.slackbot;
+package com.example.slackbot;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import me.ramswaroop.jbot.core.slack.models.Attachment;
 import me.ramswaroop.jbot.core.slack.models.RichMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
@@ -14,8 +15,10 @@ import org.springframework.web.client.RestTemplate;
 import javax.annotation.PostConstruct;
 
 @Component
+
 @Profile("slack")
 public class SlackWebhooks {
+	
 
     private static final Logger logger = LoggerFactory.getLogger(SlackWebhooks.class);
 
@@ -25,7 +28,7 @@ public class SlackWebhooks {
      * <a href="https://my.slack.com/services/new/incoming-webhook/">here</a>.
      */
     @Value("${slackIncomingWebhookUrl}")
-    private String slackIncomingWebhookUrl;
+    private String slackIncomingWebhookUrl ;
 
     /**
      * Make a POST call to the incoming webhook url.
