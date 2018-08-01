@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
-@ComponentScan(basePackages = { "com.example.slackbot" })
+
 @SpringBootApplication(scanBasePackages = { "me.ramswaroop.jbot", "com.example" })
 @EnableConfigurationProperties
 public class SlackBotApplication extends SpringBootServletInitializer {

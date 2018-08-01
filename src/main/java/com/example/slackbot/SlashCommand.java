@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -56,7 +56,7 @@ public class SlashCommand {
 			@RequestParam("response_url") String responseUrl) {
 		// validate token
 		if (!token.equals(slackToken)) {
-			System.out.println("sorry");
+			
 			return new RichMessage("Sorry! You're not lucky enough to use our slack command.");
 		}
 
